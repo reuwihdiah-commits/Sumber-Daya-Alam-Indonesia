@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDA-Pedia: Media Pembelajaran SDA Indonesia Kelas 7</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4ade80;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22c55e;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="bg-emerald-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded-lg text-emerald-600 shadow-inner">
+                    <i data-lucide="leaf" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-extrabold tracking-tight">SDA-PEDIA</h1>
+                    <p class="text-xs text-emerald-100">Sumber Daya Alam Indonesia • IPS Kelas 7</p>
+                </div>
+            </div>
+            
+            <nav class="flex flex-wrap justify-center gap-1 md:gap-2">
+                <button onclick="switchTab('materi')" id="btn-materi" class="nav-btn px-4 py-2 rounded-lg font-medium text-sm transition-all bg-emerald-700 text-white shadow-md">
+                    <span class="flex items-center gap-1.5"><i data-lucide="book-open" class="w-4 h-4"></i> Materi</span>
+                </button>
+                <button onclick="switchTab('peta')" id="btn-peta" class="nav-btn px-4 py-2 rounded-lg font-medium text-sm transition-all hover:bg-emerald-700/50 text-emerald-100">
+                    <span class="flex items-center gap-1.5"><i data-lucide="map" class="w-4 h-4"></i> Peta Sebaran</span>
+                </button>
+                <button onclick="switchTab('simulasi')" id="btn-simulasi" class="nav-btn px-4 py-2 rounded-lg font-medium text-sm transition-all hover:bg-emerald-700/50 text-emerald-100">
+                    <span class="flex items-center gap-1.5"><i data-lucide="gamepad-2" class="w-4 h-4"></i> Game Edukasi</span>
+                </button>
+                <button onclick="switchTab('kuis')" id="btn-kuis" class="nav-btn px-4 py-2 rounded-lg font-medium text-sm transition-all hover:bg-emerald-700/50 text-emerald-100">
+                    <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4"></i> Kuis Interaktif</span>
+                </button>
+                <button onclick="switchTab('tutor')" id="btn-tutor" class="nav-btn px-4 py-2 rounded-lg font-medium text-sm transition-all hover:bg-emerald-700/50 text-emerald-100">
+                    <span class="flex items-center gap-1.5"><i data-lucide="sparkles" class="w-4 h-4"></i> Tanya AI</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-6">
+
+        <!-- ================= TAB 1: MATERI ================= -->
+        <section id="tab-materi" class="tab-content active space-y-6">
+            <!-- Pengantar -->
+            <div class="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-3xl p-6 md:p-8 text-white shadow-md relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl">
+                    <span class="bg-emerald-400/30 text-emerald-100 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">Kurikulum Merdeka</span>
+                    <h2 class="text-2xl md:text-4xl font-extrabold mt-2 mb-3">Mari Menjelajahi Kekayaan Alam Nusantara!</h2>
+                    <p class="text-sm md:text-base text-emerald-50 text-justify leading-relaxed">
+                        Indonesia dikenal sebagai negara yang sangat kaya akan Sumber Daya Alam (SDA). Sebagai siswa kelas 7, mari kita pelajari apa saja jenis-jenis SDA tersebut, di mana saja persebarannya, serta bagaimana cara memanfaatkan dan melestarikannya dengan bijak demi masa depan bangsa!
+                    </p>
+                </div>
+                <div class="absolute right-4 bottom-4 opacity-10 pointer-events-none">
+                    <i data-lucide="globe" class="w-64 h-64"></i>
+                </div>
+            </div>
+
+            <!-- Navigasi Sub-Materi -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Klasifikasi SDA -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-lime-100 text-lime-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Klasifikasi & Jenis SDA</h3>
+                        <p class="text-sm text-slate-500 mb-4">Pahami perbedaan sumber daya alam hayati, non-hayati, serta sumber daya alam yang dapat diperbarui dan tidak dapat diperbarui.</p>
+                    </div>
+                    <button onclick="openMateriModal('klasifikasi')" class="w-full bg-lime-600 hover:bg-lime-700 text-white font-medium py-2 px-4 rounded-xl text-sm transition-colors">Pelajari Lengkap</button>
+                </div>
+
+                <!-- SDA Kehutanan & Tambang -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="trees" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Hutan & Tambang Indonesia</h3>
+                        <p class="text-sm text-slate-500 mb-4">Eksplorasi potensi hutan hujan tropis, batu bara, minyak bumi, emas, hingga gas alam yang melimpah ruah di bumi Indonesia.</p>
+                    </div>
+                    <button onclick="openMateriModal('tambang')" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2 px-4 rounded-xl text-sm transition-colors">Pelajari Lengkap</button>
+                </div>
+
+                <!-- SDA Kelautan -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-sky-100 text-sky-700 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="waves" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Potensi Kemaritiman</h3>
+                        <p class="text-sm text-slate-500 mb-4">Sebagai negara kepulauan, laut Indonesia menyimpan kekayaan luar biasa: perikanan tangkap, hutan mangrove, hingga terumbu karang yang indah.</p>
+                    </div>
+                    <button onclick="openMateriModal('laut')" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-medium py-2 px-4 rounded-xl text-sm transition-colors">Pelajari Lengkap</button>
+                </div>
+            </div>
+
+            <!-- Prinsip Kelestarian -->
+            <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-6">
+                <div class="bg-emerald-600 text-white p-4 rounded-full">
+                    <i data-lucide="shield-alert" class="w-8 h-8"></i>
+                </div>
+                <div class="space-y-1">
+                    <h4 class="text-lg font-bold text-emerald-900">Mengapa Kita Harus Melestarikan SDA?</h4>
+                    <p class="text-sm text-emerald-800">SDA bersifat terbatas (terutama yang tidak dapat diperbarui). Penggunaan secara serakah akan merusak lingkungan hidup dan menyebabkan bencana alam seperti banjir, tanah longsor, dan kepunahan satwa. Kita wajib menerapkan prinsip pembangunan berkelanjutan!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 2: PETA SEBARAN ================= -->
+        <section id="tab-peta" class="tab-content space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-800">Peta Interaktif Sebaran Komoditas SDA</h2>
+                        <p class="text-sm text-slate-500">Klik wilayah kepulauan Indonesia di bawah ini untuk melihat komoditas SDA unggulannya!</p>
+                    </div>
+                    <!-- Legend -->
+                    <div class="flex flex-wrap gap-3 bg-slate-50 p-2.5 rounded-xl text-xs border border-slate-200">
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-amber-500"></span> Tambang</span>
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-emerald-500"></span> Pertanian/Hutan</span>
+                        <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-sky-500"></span> Kelautan</span>
+                    </div>
+                </div>
+
+                <!-- Peta Grafik SVG Interaktif -->
+                <div class="bg-slate-100 rounded-2xl p-4 flex justify-center items-center overflow-x-auto border border-slate-200">
+                    <div class="relative w-[800px] h-[350px] flex-shrink-0">
+                        <!-- BG Outline Simple Peta Indonesia -->
+                        <svg viewBox="0 0 800 350" class="w-full h-full text-slate-300 drop-shadow-sm">
+                            <!-- Sumatera -->
+                            <path d="M50,80 L180,180 L130,220 L20,110 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" class="cursor-pointer hover:fill-emerald-200 transition-colors" onclick="showRegionInfo('Sumatera')" />
+                            <!-- Jawa -->
+                            <path d="M150,235 L330,250 L330,270 L150,255 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" class="cursor-pointer hover:fill-emerald-200 transition-colors" onclick="showRegionInfo('Jawa')" />
+                            <!-- Kalimantan -->
+                            <path d="M220,90 L340,90 L360,180 L230,190 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" class="cursor-pointer hover:fill-emerald-200 transition-colors" onclick="showRegionInfo('Kalimantan')" />
+                            <!-- Sulawesi -->
+                            <path d="M380,110 L440,90 L450,180 L390,190 L420,140 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" class="cursor-pointer hover:fill-emerald-200 transition-colors" onclick="showRegionInfo('Sulawesi')" />
+                            <!-- Bali & Nusa Tenggara -->
+                            <path d="M340,255 L500,265 L500,280 L340,270 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" class="cursor-pointer hover:fill-emerald-200 transition-colors" onclick="showRegionInfo('Nusa Tenggara')" />
+                            <!-- Maluku -->
+                            <path d="M480,120 L550,110 L540,190 L470,180 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" class="cursor-pointer hover:fill-emerald-200 transition-colors" onclick="showRegionInfo('Maluku')" />
+                            <!-- Papua -->
+                            <path d="M570,130 L750,140 L720,240 L580,210 Z" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2" class="cursor-pointer hover:fill-emerald-200 transition-colors" onclick="showRegionInfo('Papua')" />
+
+                            <!-- Teks Label Pulau -->
+                            <text x="80" y="140" fill="#475569" font-size="12" font-weight="bold">SUMATERA</text>
+                            <text x="210" y="275" fill="#475569" font-size="12" font-weight="bold">JAWA</text>
+                            <text x="260" y="140" fill="#475569" font-size="12" font-weight="bold">KALIMANTAN</text>
+                            <text x="410" y="110" fill="#475569" font-size="12" font-weight="bold">SULAWESI</text>
+                            <text x="390" y="295" fill="#475569" font-size="10" font-weight="bold">BALI & NUSRA</text>
+                            <text x="500" y="145" fill="#475569" font-size="10" font-weight="bold">MALUKU</text>
+                            <text x="640" y="180" fill="#475569" font-size="12" font-weight="bold">PAPUA</text>
+                        </svg>
+
+                        <!-- Pin Markers on map -->
+                        <!-- Sumatera Pins -->
+                        <div class="absolute top-[100px] left-[70px] cursor-pointer" onclick="showRegionInfo('Sumatera')">
+                            <span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span></span>
+                        </div>
+                        <div class="absolute top-[160px] left-[130px] cursor-pointer" onclick="showRegionInfo('Sumatera')">
+                            <span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span></span>
+                        </div>
+                        <!-- Kalimantan Pins -->
+                        <div class="absolute top-[120px] left-[290px] cursor-pointer" onclick="showRegionInfo('Kalimantan')">
+                            <span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span></span>
+                        </div>
+                        <!-- Papua Pins -->
+                        <div class="absolute top-[170px] left-[650px] cursor-pointer" onclick="showRegionInfo('Papua')">
+                            <span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span></span>
+                        </div>
+                        <!-- Jawa Pins -->
+                        <div class="absolute top-[235px] left-[220px] cursor-pointer" onclick="showRegionInfo('Jawa')">
+                            <span class="flex h-3 w-3 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Box Wilayah terpilih -->
+                <div id="region-info-box" class="mt-6 bg-slate-50 border border-slate-200 rounded-2xl p-6 transition-all">
+                    <div class="text-center py-8 text-slate-400" id="region-placeholder">
+                        <i data-lucide="map-pin" class="w-12 h-12 mx-auto mb-2 text-slate-300"></i>
+                        <p class="font-medium">Klik pada salah satu pulau di atas untuk memunculkan detail kekayaan alamnya!</p>
+                    </div>
+                    <div id="region-detail" class="hidden space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-emerald-600 text-white p-2 rounded-lg">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800" id="detail-title">Nama Pulau</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="detail-cards">
+                            <!-- Diisi dinamis lewat JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 3: SIMULASI GAME ================= -->
+        <section id="tab-simulasi" class="tab-content space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 max-w-3xl mx-auto">
+                <div class="text-center space-y-2 mb-6">
+                    <h2 class="text-2xl font-extrabold text-slate-800">Eko-Kelola: Game Keseimbangan Alam</h2>
+                    <p class="text-sm text-slate-500">Jadilah menteri lingkungan & ekonomi! Kelola SDA Indonesia agar rakyat sejahtera namun alam tetap lestari.</p>
+                </div>
+
+                <!-- Status Game -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 text-center">
+                        <div class="flex justify-center text-blue-600 mb-1"><i data-lucide="coins" class="w-6 h-6"></i></div>
+                        <span class="text-xs text-blue-700 block">Pendapatan Negara</span>
+                        <span id="game-money" class="text-lg font-bold text-blue-900">Rp 50 Triliun</span>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-center">
+                        <div class="flex justify-center text-emerald-600 mb-1"><i data-lucide="trees" class="w-6 h-6"></i></div>
+                        <span class="text-xs text-emerald-700 block">Kondisi Hutan & Alam</span>
+                        <span id="game-forest" class="text-lg font-bold text-emerald-900">80% Lestari</span>
+                    </div>
+                    <div class="bg-rose-50 border border-rose-100 rounded-xl p-4 text-center">
+                        <div class="flex justify-center text-rose-600 mb-1"><i data-lucide="users" class="w-6 h-6"></i></div>
+                        <span class="text-xs text-rose-700 block">Kepuasan Rakyat</span>
+                        <span id="game-satisfaction" class="text-lg font-bold text-rose-900">75% Puas</span>
+                    </div>
+                </div>
+
+                <!-- Area Pertanyaan Skenario -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <span class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">Kasus <span id="game-turn">1</span>/5</span>
+                        <h4 class="text-sm font-semibold text-slate-600" id="game-topic">Sektor Kehutanan</h4>
+                    </div>
+                    <p class="text-slate-800 font-medium" id="game-scenario">Skenario akan muncul di sini...</p>
+                    
+                    <div class="grid grid-cols-1 gap-3 pt-2">
+                        <button onclick="chooseGameOption('A')" class="w-full text-left bg-white hover:bg-slate-100 border border-slate-200 hover:border-slate-300 p-4 rounded-xl text-sm font-medium transition-all flex justify-between items-center group">
+                            <span id="option-a-text">Pilihan A</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button onclick="chooseGameOption('B')" class="w-full text-left bg-white hover:bg-slate-100 border border-slate-200 hover:border-slate-300 p-4 rounded-xl text-sm font-medium transition-all flex justify-between items-center group">
+                            <span id="option-b-text">Pilihan B</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hasil Akhir Game -->
+                <div id="game-result-modal" class="hidden mt-6 bg-emerald-950 text-emerald-50 rounded-2xl p-6 text-center space-y-4">
+                    <div class="w-16 h-16 bg-emerald-800/50 rounded-full flex items-center justify-center mx-auto text-emerald-300">
+                        <i data-lucide="trophy" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-white">Evaluasi Kepemimpinan Anda!</h3>
+                    <p class="text-sm text-emerald-200 leading-relaxed" id="game-feedback">Hasil evaluasi kebijakan...</p>
+                    <button onclick="resetGame()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-2.5 px-6 rounded-xl text-sm transition-colors shadow-md">Main Lagi</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: KUIS INTERAKTIF ================= -->
+        <section id="tab-kuis" class="tab-content space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 max-w-2xl mx-auto">
+                <div id="quiz-intro" class="text-center space-y-4 py-6">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-inner">
+                        <i data-lucide="brain-circuit" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">Uji Pemahamanmu!</h2>
+                        <p class="text-sm text-slate-500 mt-1">Selesaikan 5 soal kuis bertema Sumber Daya Alam Indonesia untuk mendapatkan Lencana Kehormatan.</p>
+                    </div>
+                    <button onclick="startQuiz()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all">Mulai Kuis Sekarang</button>
+                </div>
+
+                <div id="quiz-area" class="hidden space-y-6">
+                    <!-- Progress bar -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between items-center text-xs font-semibold text-slate-500">
+                            <span>Kuis SDA Indonesia</span>
+                            <span>Soal <span id="quiz-current-num">1</span> dari <span id="quiz-total-num">5</span></span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2.5">
+                            <div id="quiz-progress-bar" class="bg-emerald-500 h-2.5 rounded-full transition-all" style="width: 20%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Question -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+                        <h3 class="font-bold text-slate-800 md:text-lg" id="quiz-question">Pertanyaan kuis diletakkan di sini?</h3>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="grid grid-cols-1 gap-3" id="quiz-options">
+                        <!-- Pilihan jawaban diisi via JS -->
+                    </div>
+
+                    <!-- Pembahasan (Awalnya disembunyikan) -->
+                    <div id="quiz-explanation-box" class="hidden bg-emerald-50 border border-emerald-100 rounded-xl p-4 space-y-2">
+                        <div class="flex items-center gap-2 text-emerald-800 font-bold text-sm">
+                            <i data-lucide="info" class="w-4 h-4"></i>
+                            <span>Penjelasan Edukatif:</span>
+                        </div>
+                        <p class="text-sm text-emerald-700" id="quiz-explanation-text">Penjelasan jawaban yang benar.</p>
+                        <button onclick="nextQuizQuestion()" class="mt-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-1.5 px-4 rounded-lg text-sm transition-colors flex items-center gap-1.5 ml-auto">
+                            <span>Lanjut</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="hidden text-center space-y-6 py-6">
+                    <div class="w-24 h-24 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto shadow-inner relative">
+                        <i data-lucide="award" class="w-12 h-12"></i>
+                        <span class="absolute -top-1 -right-1 bg-emerald-500 text-white text-xs font-extrabold px-2 py-0.5 rounded-full" id="badge-tier">Pemula</span>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-extrabold text-slate-800">Kuis Selesai!</h3>
+                        <p class="text-slate-500 mt-1">Kamu berhasil mendapatkan skor:</p>
+                        <div class="text-5xl font-black text-emerald-600 mt-2" id="quiz-final-score">80/100</div>
+                    </div>
+                    <div class="bg-slate-50 rounded-xl p-4 text-sm text-slate-600 border border-slate-200 max-w-md mx-auto" id="quiz-badge-desc">
+                        Luar biasa! Kamu memahami potensi hutan dan kemaritiman Indonesia dengan baik.
+                    </div>
+                    <button onclick="resetQuiz()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-6 rounded-xl text-sm shadow-md transition-all">Ulangi Kuis</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 5: TANYA AI ================= -->
+        <section id="tab-tutor" class="tab-content space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 max-w-3xl mx-auto flex flex-col h-[550px]">
+                <!-- Header Chat -->
+                <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-teal-100 text-teal-700 p-2.5 rounded-xl">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Tutor Bot SDA Indonesia</h3>
+                            <p class="text-xs text-emerald-600 flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span> Didukung Gemini AI - Khusus Kelas 7</p>
+                        </div>
+                    </div>
+                    <button onclick="clearChat()" class="text-xs text-rose-500 hover:text-rose-700 font-semibold flex items-center gap-1">
+                        <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Hapus Obrolan
+                    </button>
+                </div>
+
+                <!-- Chat Box (Scrollable) -->
+                <div id="chat-messages" class="flex-grow overflow-y-auto space-y-4 pr-2 mb-4 scroll-smooth">
+                    <!-- Selamat Datang -->
+                    <div class="flex gap-3 items-start">
+                        <div class="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">AI</div>
+                        <div class="bg-slate-100 rounded-r-2xl rounded-bl-2xl p-3 text-sm max-w-[85%] space-y-2">
+                            <p class="font-medium text-slate-800">Halo! Aku adalah Kakak AI, Tutor Geografi dan IPS untuk Kelas 7.</p>
+                            <p class="text-slate-600">Kamu punya pertanyaan tentang Sumber Daya Alam Indonesia? Misalnya: <em>"Kenapa terumbu karang Indonesia sangat beragam?"</em> atau <em>"Bagaimana terbentuknya batubara?"</em>. Silakan tanyakan di sini!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contoh Pertanyaan Cepat -->
+                <div class="flex flex-wrap gap-2 mb-3">
+                    <button onclick="quickAsk('Apa perbedaan SDA hayati dan non-hayati?')" class="text-xs bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-slate-300 text-slate-700 px-3 py-1.5 rounded-full transition-all">Apa beda SDA hayati & non-hayati?</button>
+                    <button onclick="quickAsk('Mengapa Indonesia memiliki banyak gunung berapi dan bahan tambang?')" class="text-xs bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-slate-300 text-slate-700 px-3 py-1.5 rounded-full transition-all">Mengapa kita kaya bahan tambang?</button>
+                    <button onclick="quickAsk('Bagaimana cara melestarikan terumbu karang?')" class="text-xs bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-slate-300 text-slate-700 px-3 py-1.5 rounded-full transition-all">Cara lestarikan terumbu karang?</button>
+                </div>
+
+                <!-- Input Chat -->
+                <div class="flex gap-2">
+                    <input type="text" id="chat-input" placeholder="Tanyakan seputar materi SDA Kelas 7..." class="flex-grow bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:bg-white transition-all" onkeypress="handleChatKey(event)">
+                    <button onclick="sendMessage()" class="bg-teal-600 hover:bg-teal-700 text-white p-2.5 rounded-xl transition-colors flex items-center justify-center">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-xs text-center">
+        <p class="max-w-7xl mx-auto px-4">© 2026 Media Pembelajaran Interaktif IPS Kelas 7 - Dikembangkan secara Edukatif & Interaktif</p>
+    </footer>
+
+    <!-- ================= MODAL MATERI DETAIL ================= -->
+    <div id="materi-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl flex flex-col">
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-t-3xl">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="book-open" class="w-6 h-6"></i>
+                    <h3 class="font-bold text-lg md:text-xl" id="modal-title">Judul Materi</h3>
+                </div>
+                <button onclick="closeMateriModal()" class="text-white hover:text-emerald-100 transition-colors p-1.5 rounded-lg hover:bg-white/10">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="p-6 space-y-6 overflow-y-auto text-slate-700 text-sm md:text-base leading-relaxed" id="modal-body">
+                <!-- Diisi Dinamis -->
+            </div>
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-slate-100 flex justify-end">
+                <button onclick="closeMateriModal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold py-2 px-6 rounded-xl text-sm transition-colors">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Javascript -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Gemini AI Config & Integration
+        const apiKey = ""; // Set default empty string per instruction
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+
+        // ---------------- TAB CONTROL ----------------
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Reset nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = "nav-btn px-4 py-2 rounded-lg font-medium text-sm transition-all hover:bg-emerald-700/50 text-emerald-100";
+            });
+
+            // Show active tab
+            document.getElementById(`tab-${tabName}`).classList.add('active');
+            // Highlight active button
+            const activeBtn = document.getElementById(`btn-${tabName}`);
+            if (activeBtn) {
+                activeBtn.className = "nav-btn px-4 py-2 rounded-lg font-medium text-sm transition-all bg-emerald-700 text-white shadow-md";
+            }
+        }
+
+        // ---------------- MATERI MODAL DATA ----------------
+        const materiData = {
+            klasifikasi: {
+                title: "Klasifikasi & Jenis Sumber Daya Alam",
+                content: `
+                    <div class="space-y-4">
+                        <p class="font-semibold text-emerald-700">Apa itu Sumber Daya Alam?</p>
+                        <p>Sumber daya alam adalah semua bahan yang ditemukan oleh manusia di alam yang dapat digunakan untuk kepentingan hidupnya.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-lime-50 p-4 rounded-xl border border-lime-100">
+                                <h4 class="font-bold text-lime-800 flex items-center gap-1.5 mb-2"><i data-lucide="refresh-cw" class="w-4 h-4"></i> Dapat Diperbarui (Renewable)</h4>
+                                <p class="text-xs text-slate-600">SDA yang tidak akan habis karena alam terus memproduksinya atau kita dapat membudidayakannya kembali.</p>
+                                <ul class="list-disc list-inside text-xs font-semibold mt-2 text-lime-900">
+                                    <li>Hewan (Sapi, Ikan, Unggas)</li>
+                                    <li>Tumbuhan (Padi, Kelapa Sawit, Hutan)</li>
+                                    <li>Air, Udara, dan Sinar Matahari</li>
+                                </ul>
+                            </div>
+                            <div class="bg-rose-50 p-4 rounded-xl border border-rose-100">
+                                <h4 class="font-bold text-rose-800 flex items-center gap-1.5 mb-2"><i data-lucide="ban" class="w-4 h-4"></i> Tidak Dapat Diperbarui (Non-renewable)</h4>
+                                <p class="text-xs text-slate-600">SDA yang jumlahnya sangat terbatas karena proses pembentukannya membutuhkan waktu jutaan tahun.</p>
+                                <ul class="list-disc list-inside text-xs font-semibold mt-2 text-rose-900">
+                                    <li>Bahan Tambang Mineral (Emas, Tembaga, Besi)</li>
+                                    <li>Bahan Energi fosil (Minyak Bumi, Batubara)</li>
+                                    <li>Gas Alam</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mt-4">
+                            <h4 class="font-bold text-slate-800 mb-1">Pembagian Berdasarkan Sifat Fisik:</h4>
+                            <p class="text-xs">1. <strong class="text-emerald-700">SDA Hayati (Biotik)</strong>: Berasal dari makhluk hidup (contoh: kayu hutan, ikan tangkap).</p>
+                            <p class="text-xs mt-1">2. <strong class="text-emerald-700">SDA Non-Hayati (Abiotik)</strong>: Berasal dari benda mati (contoh: tanah, air, batuan tambang).</p>
+                        </div>
+                    </div>
+                `
+            },
+            tambang: {
+                title: "Potensi Kehutanan & Pertambangan Indonesia",
+                content: `
+                    <div class="space-y-4">
+                        <p class="font-semibold text-emerald-700">1. Kekayaan Hutan Indonesia</p>
+                        <p>Indonesia memiliki hutan hujan tropis yang sangat luas, terutama di pulau Kalimantan, Sumatera, dan Papua. Fungsi hutan Indonesia mencakup:</p>
+                        <ul class="list-disc list-inside text-sm space-y-1 pl-2 text-slate-600">
+                            <li><strong>Hutan Produksi</strong>: Menghasilkan kayu (Jati, Meranti, Sengon) untuk industri konstruksi dan kertas.</li>
+                            <li><strong>Hutan Lindung</strong>: Melindungi sistem daya dukung lingkungan (mencegah banjir, erosi, menjaga cadangan air).</li>
+                            <li><strong>Hutan Konservasi</strong>: Melestarikan keanekaragaman hayati flora dan fauna agar terhindar dari kepunahan (seperti Taman Nasional).</li>
+                        </ul>
+
+                        <p class="font-semibold text-amber-700 mt-6">2. Kekayaan Hasil Pertambangan</p>
+                        <p>Secara geologis, Indonesia berada di jalur pertemuan lempeng tektonik, menjadikannya sangat kaya akan material mineral dan energi:</p>
+                        <div class="bg-amber-50 p-4 rounded-xl border border-amber-100 space-y-2">
+                            <p class="text-xs"><strong>• Batubara:</strong> Ditemukan melimpah di Kalimantan Timur dan Sumatera Selatan. Digunakan sebagai bahan bakar utama pembangkit listrik (PLTU).</p>
+                            <p class="text-xs"><strong>• Minyak & Gas Bumi:</strong> Sumber energi fosil utama yang dieksploitasi di Sumatera, Laut Jawa, dan Papua Barat.</p>
+                            <p class="text-xs"><strong>• Nikel & Tembaga:</strong> Komoditas strategis masa depan untuk pembuatan baterai kendaraan listrik. Sulawesi adalah penghasil nikel terbesar.</p>
+                        </div>
+                    </div>
+                `
+            },
+            laut: {
+                title: "Potensi Kemaritiman & Kelautan Indonesia",
+                content: `
+                    <div class="space-y-4">
+                        <p class="font-semibold text-sky-700">Laut Indonesia: Pusat Megadiversitas Dunia</p>
+                        <p>Dua pertiga luas wilayah Indonesia adalah lautan. Hal ini menjadikan Indonesia memiliki potensi kemaritiman yang luar biasa besar:</p>
+                        
+                        <div class="space-y-4 mt-2">
+                            <div class="flex gap-3">
+                                <span class="bg-sky-100 text-sky-700 p-2 rounded-lg h-fit font-bold text-xs">A</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Perikanan Tangkap & Budidaya</h4>
+                                    <p class="text-xs text-slate-600">Wilayah laut timur Indonesia sangat melimpah dengan komoditas ikan tuna premium, sedangkan wilayah pesisir dikembangkan untuk budidaya rumput laut, udang, dan bandeng.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <span class="bg-sky-100 text-sky-700 p-2 rounded-lg h-fit font-bold text-xs">B</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Hutan Mangrove (Bakau)</h4>
+                                    <p class="text-xs text-slate-600">Berfungsi menahan abrasi pantai oleh air laut, menjadi tempat tinggal berkembangbiaknya udang dan kepiting bakau, serta mampu menyerap karbon udara secara maksimal.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <span class="bg-sky-100 text-sky-700 p-2 rounded-lg h-fit font-bold text-xs">C</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 text-sm">Terumbu Karang (Coral Reef)</h4>
+                                    <p class="text-xs text-slate-600">Indonesia berada di pusat Segitiga Terumbu Karang Dunia. Destinasi seperti Raja Ampat (Papua) dan Bunaken (Sulawesi) menjadi habitat ratusan spesies laut serta magnet pariwisata bahari global.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openMateriModal(key) {
+            const selected = materiData[key];
+            if (selected) {
+                document.getElementById('modal-title').innerText = selected.title;
+                document.getElementById('modal-body').innerHTML = selected.content;
+                document.getElementById('materi-modal').classList.remove('hidden');
+                // Re-init lucide icons inside modal
+                lucide.createIcons();
+            }
+        }
+
+        function closeMateriModal() {
+            document.getElementById('materi-modal').classList.add('hidden');
+        }
+
+        // ---------------- PETA SEBARAN CONTROLLER ----------------
+        const regionalSDA = {
+            Sumatera: {
+                title: "Kekayaan Sumber Daya Alam Sumatera",
+                items: [
+                    { name: "Batubara", icon: "box", type: "Tambang", desc: "Penambangan batubara besar berada di Tanjung Enim, Sumatera Selatan." },
+                    { name: "Kelapa Sawit", icon: "shrub", type: "Pertanian", desc: "Sumatera adalah produsen kelapa sawit utama Indonesia untuk bahan minyak goreng." },
+                    { name: "Minyak Bumi", icon: "droplet", type: "Tambang", desc: "Ditemukan di wilayah Riau (Blok Rokan) dan lepas pantai barat laut." }
+                ]
+            },
+            Jawa: {
+                title: "Kekayaan Sumber Daya Alam Jawa",
+                items: [
+                    { name: "Hutan Jati", icon: "trees", type: "Kehutanan", desc: "Banyak tersebar di wilayah Jawa Tengah dan Jawa Timur, digunakan untuk industri furnitur berkualitas." },
+                    { name: "Pertanian Padi", icon: "wheat", type: "Pertanian", desc: "Lahan sawah vulkanis subur menjadikan Jawa lumbung pangan nasional utama." },
+                    { name: "Gas Alam", icon: "flame", type: "Tambang", desc: "Gas alam cair banyak ditambang di lepas pantai utara laut Jawa." }
+                ]
+            },
+            Kalimantan: {
+                title: "Kekayaan Sumber Daya Alam Kalimantan",
+                items: [
+                    { name: "Batu Bara", icon: "box", type: "Tambang", desc: "Merupakan cadangan batubara terbesar Indonesia, diekspor ke berbagai belahan dunia." },
+                    { name: "Hutan Hujan", icon: "palm-tree", type: "Kehutanan", desc: "Paru-paru dunia yang kaya kayu komersial berkualitas tinggi seperti meranti." },
+                    { name: "Bauksit & Nikel", icon: "anvil", type: "Tambang", desc: "Ditambang untuk pembuatan aluminium dan logam dasar." }
+                ]
+            },
+            Sulawesi: {
+                title: "Kekayaan Sumber Daya Alam Sulawesi",
+                items: [
+                    { name: "Nikel", icon: "settings", type: "Tambang", desc: "Sulawesi Tengah & Tenggara memiliki cadangan nikel terbesar dunia untuk baterai EV." },
+                    { name: "Aspal", icon: "utility-pole", type: "Tambang", desc: "Tambang aspal alam legendaris berada di Pulau Buton." },
+                    { name: "Hasil Laut", icon: "fish", type: "Kelautan", desc: "Perairan laut dalam menyimpan potensi ikan tuna dan cakalang melimpah." }
+                ]
+            },
+            "Nusa Tenggara": {
+                title: "Kekayaan Sumber Daya Alam Bali & Nusa Tenggara",
+                items: [
+                    { name: "Peternakan Sapi", icon: "beef", type: "Pertanian", desc: "Kondisi sabana kering mendukung peternakan sapi kualitas unggulan." },
+                    { name: "Pariwisata Bahari", icon: "ship", type: "Kelautan", desc: "Terumbu karang, pantai eksotis, dan fauna endemik Komodo." },
+                    { name: "Cendana", icon: "flower", type: "Pertanian", desc: "Kayu wangi khas NTT yang bernilai jual sangat tinggi." }
+                ]
+            },
+            Maluku: {
+                title: "Kekayaan Sumber Daya Alam Kepulauan Maluku",
+                items: [
+                    { name: "Rempah-rempah", icon: "sprout", type: "Pertanian", desc: "Pala dan cengkeh legendaris yang menarik penjajah Eropa ke nusantara." },
+                    { name: "Perikanan Tangkap", icon: "fish-symbol", type: "Kelautan", desc: "Laut Banda dan Laut Arafura merupakan lumbung ikan nasional." },
+                    { name: "Nikel & Emas", icon: "gem", type: "Tambang", desc: "Memiliki potensi mineral logam berharga di beberapa kepulauan." }
+                ]
+            },
+            Papua: {
+                title: "Kekayaan Sumber Daya Alam Papua",
+                items: [
+                    { name: "Tembaga & Emas", icon: "gem", type: "Tambang", desc: "Lokasi tambang Grasberg merupakan salah satu tambang emas terbesar di dunia." },
+                    { name: "Sagu", icon: "cookie", type: "Pertanian", desc: "Pangan lokal lestari dari batang pohon sagu alami hutan Papua." },
+                    { name: "Cagar Alam Lorentz", icon: "leaf", type: "Kehutanan", desc: "Taman nasional dengan keanekaragaman hayati terkaya di Asia Tenggara." }
+                ]
+            }
+        };
+
+        function showRegionInfo(regionKey) {
+            const data = regionalSDA[regionKey];
+            if (!data) return;
+
+            document.getElementById('region-placeholder').classList.add('hidden');
+            const detailContainer = document.getElementById('region-detail');
+            detailContainer.classList.remove('hidden');
+
+            document.getElementById('detail-title').innerText = data.title;
+            
+            let cardsHtml = "";
+            data.items.forEach(item => {
+                let badgeColor = "bg-amber-100 text-amber-700";
+                if (item.type === "Pertanian" || item.type === "Kehutanan") badgeColor = "bg-emerald-100 text-emerald-700";
+                if (item.type === "Kelautan") badgeColor = "bg-sky-100 text-sky-700";
+
+                cardsHtml += `
+                    <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm hover:scale-[1.02] transition-transform duration-200">
+                        <div class="flex items-center gap-2.5 mb-2">
+                            <span class="${badgeColor} px-2 py-0.5 rounded text-xs font-bold">${item.type}</span>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                            <i data-lucide="${item.icon}" class="w-4 h-4 text-emerald-600"></i>
+                            ${item.name}
+                        </h4>
+                        <p class="text-xs text-slate-500 mt-1.5 leading-relaxed">${item.desc}</p>
+                    </div>
+                `;
+            });
+
+            document.getElementById('detail-cards').innerHTML = cardsHtml;
+            lucide.createIcons();
+        }
+
+        // ---------------- SIMULASI GAME CONTROLLER ----------------
+        let gameState = {
+            turn: 1,
+            money: 50,
+            forest: 80,
+            satisfaction: 75
+        };
+
+        const gameScenarios = [
+            {
+                topic: "Sektor Kehutanan",
+                scenario: "Sebuah perusahaan asing mengajukan izin pembabatan hutan di Kalimantan untuk dikonversi menjadi kebun sawit raksasa. Nilai investasinya sangat besar, tapi habitat orangutan terancam.",
+                options: {
+                    A: {
+                        text: "Terima Investasi (SDA cepat habis, kas negara melimpah, rakyat dapat kerja instan namun alam rusak).",
+                        money: 30, forest: -25, satisfaction: 10
+                    },
+                    B: {
+                        text: "Tolak & Alihkan ke Ekowisata (Hutan lestari, devisa masuk pelan-pelan secara berkelanjutan).",
+                        money: 5, forest: 10, satisfaction: 5
+                    }
+                }
+            },
+            {
+                topic: "Sektor Kemaritiman",
+                scenario: "Banyak nelayan asing ilegal mencuri ikan di perairan Laut Natuna. Mereka menggunakan jaring pukat harimau yang merusak karang dasar laut.",
+                options: {
+                    A: {
+                        text: "Tegakkan Hukum & Tenggelamkan Kapal Ilegal (Bakar semangat rakyat, lestarikan karang, modal patroli naik).",
+                        money: -10, forest: 15, satisfaction: 20
+                    },
+                    B: {
+                        text: "Biarkan saja demi menjaga hubungan diplomatik politik luar negeri (Menghemat anggaran, tetapi nelayan lokal marah).",
+                        money: 5, forest: -15, satisfaction: -20
+                    }
+                }
+            },
+            {
+                topic: "Sektor Tambang Batu Bara",
+                scenario: "Permintaan batubara global melonjak drastis. Pengusaha tambang meminta kelonggaran izin penambangan terbuka di dekat pemukiman warga.",
+                options: {
+                    A: {
+                        text: "Batasi Penambangan & Wajibkan Reklamasi Bekas Tambang (Menjaga kesehatan lingkungan warga meskipun pendapatan melambat).",
+                        money: -5, forest: 10, satisfaction: 15
+                    },
+                    B: {
+                        text: "Izinkan Eksploitasi Maksimal demi Keuntungan Ekspor (Sangat untung secara finansial, tapi warga demo kena polusi).",
+                        money: 35, forest: -20, satisfaction: -25
+                    }
+                }
+            },
+            {
+                topic: "Sektor Energi Alternatif",
+                scenario: "Minyak bumi kian menipis. Ada usulan proyek besar pembangunan ladang kincir angin dan panel surya nasional, namun membutuhkan biaya sangat besar.",
+                options: {
+                    A: {
+                        text: "Gunakan Dana Tambang untuk Bangun Energi Bersih (Langkah visioner masa depan, meskipun kas menyusut jangka pendek).",
+                        money: -25, forest: 15, satisfaction: 15
+                    },
+                    B: {
+                        text: "Tetap pakai batubara & minyak murah demi hemat kas negara (Uang aman, tapi emisi karbon naik pesat).",
+                        money: 15, forest: -10, satisfaction: -10
+                    }
+                }
+            },
+            {
+                topic: "Sektor Konservasi",
+                scenario: "Sebuah kawasan taman nasional terumbu karang di Sulawesi ingin diubah statusnya menjadi pelabuhan logistik komersial agar logistik antarpulau murah.",
+                options: {
+                    A: {
+                        text: "Tetap jadikan Cagar Alam & Cari lokasi pelabuhan lain (Ekosistem laut aman, logistik agak sedikit melambat).",
+                        money: -5, forest: 15, satisfaction: 5
+                    },
+                    B: {
+                        text: "Ubah menjadi Pelabuhan demi kelancaran ekonomi (Bisnis melesat, terumbu karang rusak parah terkena jangkar kapal).",
+                        money: 20, forest: -25, satisfaction: 10
+                    }
+                }
+            }
+        ];
+
+        function updateGameUI() {
+            document.getElementById('game-money').innerText = `Rp ${gameState.money} Triliun`;
+            document.getElementById('game-forest').innerText = `${gameState.forest}% Lestari`;
+            document.getElementById('game-satisfaction').innerText = `${gameState.satisfaction}% Puas`;
+            
+            if (gameState.turn <= 5) {
+                document.getElementById('game-turn').innerText = gameState.turn;
+                const sc = gameScenarios[gameState.turn - 1];
+                document.getElementById('game-topic').innerText = sc.topic;
+                document.getElementById('game-scenario').innerText = sc.scenario;
+                document.getElementById('option-a-text').innerText = sc.options.A.text;
+                document.getElementById('option-b-text').innerText = sc.options.B.text;
+            } else {
+                showGameResults();
+            }
+        }
+
+        function chooseGameOption(choice) {
+            const sc = gameScenarios[gameState.turn - 1];
+            const effect = sc.options[choice];
+            
+            gameState.money += effect.money;
+            gameState.forest = Math.max(0, Math.min(100, gameState.forest + effect.forest));
+            gameState.satisfaction = Math.max(0, Math.min(100, gameState.satisfaction + effect.satisfaction));
+            
+            gameState.turn++;
+            updateGameUI();
+        }
+
+        function showGameResults() {
+            const modal = document.getElementById('game-result-modal');
+            modal.classList.remove('hidden');
+            
+            let feedback = "";
+            if (gameState.forest >= 60 && gameState.satisfaction >= 60) {
+                feedback = `🎉 <strong>Luar Biasa! Pemimpin Teladan!</strong><br>Anda berhasil menyeimbangkan antara kemakmuran ekonomi negara (Rp ${gameState.money} T), kebahagiaan rakyat (${gameState.satisfaction}%), dan kelestarian alam nusantara (${gameState.forest}%). Indonesia tumbuh tangguh dan hijau!`;
+            } else if (gameState.forest < 50 && gameState.satisfaction >= 60) {
+                feedback = `⚠️ <strong>Pembangunan Merusak Alam!</strong><br>Meskipun rakyat Anda senang karena ekonomi makmur (Rp ${gameState.money} T), kondisi hutan dan lingkungan rusak parah (${gameState.forest}%). Berbagai bencana alam banjir dan longsor kini mengintai generasi masa depan!`;
+            } else if (gameState.forest >= 60 && gameState.satisfaction < 50) {
+                feedback = `⚠️ <strong>Konservasi Kaku, Rakyat Lesu!</strong><br>Lingkungan Anda sangat asri dan hijau (${gameState.forest}%), tetapi ekonomi Anda lesu dan rakyat banyak yang tidak puas (${gameState.satisfaction}%). Cobalah mencari opsi pembangunan yang juga menghidupkan ekonomi rakyat kecil.`;
+            } else {
+                feedback = `❌ <strong>Krisis Multi-Dimensi!</strong><br>Kebijakan Anda membuat alam rusak (${gameState.forest}%) sekaligus ekonomi kacau dan rakyat menderita (${gameState.satisfaction}%). Mari ulangi lagi dan belajarlah membuat kebijakan yang lebih terukur!`;
+            }
+            
+            document.getElementById('game-feedback').innerHTML = feedback;
+        }
+
+        function resetGame() {
+            gameState = {
+                turn: 1,
+                money: 50,
+                forest: 80,
+                satisfaction: 75
+            };
+            document.getElementById('game-result-modal').classList.add('hidden');
+            updateGameUI();
+        }
+
+        // Init game on load
+        updateGameUI();
+
+        // ---------------- KUIS INTERAKTIF CONTROLLER ----------------
+        const quizQuestions = [
+            {
+                q: "Kelompok sumber daya alam berikut yang tergolong dalam SDA hayati (biotik) yang dapat diperbarui adalah...",
+                options: [
+                    "Batu bara, minyak bumi, dan emas",
+                    "Ikan tuna, hutan bakau, dan kelapa sawit",
+                    "Besi, tembaga, dan gas alam",
+                    "Air, tanah vulkanis, dan belerang"
+                ],
+                correct: 1,
+                exp: "SDA hayati berasal dari makhluk hidup (biotik). Ikan tuna, hutan bakau, dan kelapa sawit adalah makhluk hidup yang juga dapat berkembang biak / dibudidayakan kembali (dapat diperbarui)."
+            },
+            {
+                q: "Mengapa Pulau Kalimantan dikenal sebagai salah satu daerah tambang batubara terbesar di Indonesia?",
+                options: [
+                    "Karena memiliki wilayah gurun pasir yang luas",
+                    "Karena terbentuk dari endapan material sisa tumbuhan purba jutaan tahun lalu di lahan basahnya",
+                    "Karena dekat dengan kawasan samudera terdalam",
+                    "Karena memiliki banyak gunung api aktif"
+                ],
+                correct: 1,
+                exp: "Batubara terbentuk dari sisa-sisa tumbuhan purba yang mengendap tanpa oksigen selama jutaan tahun di daerah rawa/basah purba, salah satunya di wilayah Kalimantan."
+            },
+            {
+                q: "Indonesia berada di kawasan Segitiga Terumbu Karang Dunia (Coral Triangle). Dampak positif hal ini bagi sektor pariwisata bahari adalah...",
+                options: [
+                    "Meningkatkan eksploitasi pasir pantai secara bebas",
+                    "Menarik wisatawan mancanegara untuk menyelam melihat biota laut super beragam di Raja Ampat atau Bunaken",
+                    "Mempersulit kapal logistik besar lewat",
+                    "Membuat suhu laut menjadi sangat dingin"
+                ],
+                correct: 1,
+                exp: "Keberagaman terumbu karang yang sangat kaya menjadi objek wisata ekologis (ekowisata) bernilai tinggi yang menarik penyelam dunia ke wilayah seperti Raja Ampat."
+            },
+            {
+                q: "Bahan tambang masa depan yang melimpah di Sulawesi Tengah dan digunakan sebagai bahan dasar baterai mobil listrik adalah...",
+                options: [
+                    "Tembaga",
+                    "Nikel",
+                    "Belerang",
+                    "Emas"
+                ],
+                correct: 1,
+                exp: "Nikel adalah komponen utama penyusun katoda baterai kendaraan listrik (EV). Sulawesi Tengah & Tenggara memiliki cadangan nikel terbesar di Indonesia."
+            },
+            {
+                q: "Salah satu upaya pemanfaatan hutan produksi yang sesuai dengan prinsip pembangunan berkelanjutan adalah...",
+                options: [
+                    "Melakukan penebangan habis demi keuntungan instan",
+                    "Menerapkan sistem tebang pilih dan melakukan reboisasi (penanaman kembali)",
+                    "Membakar sisa sisa kayu agar lahan bersih",
+                    "Melarang semua aktivitas pemanfaatan hutan sama sekali"
+                ],
+                correct: 1,
+                exp: "Sistem tebang pilih memastikan pohon kecil tetap tumbuh, dan reboisasi mengembalikan kelestarian hutan sehingga generasi masa depan tetap bisa menikmati hasil hutan produksi."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+        let quizScore = 0;
+        let answerSelected = false;
+
+        function startQuiz() {
+            document.getElementById('quiz-intro').classList.add('hidden');
+            document.getElementById('quiz-area').classList.remove('hidden');
+            currentQuizIndex = 0;
+            quizScore = 0;
+            showQuizQuestion();
+        }
+
+        function showQuizQuestion() {
+            answerSelected = false;
+            document.getElementById('quiz-explanation-box').classList.add('hidden');
+            
+            const qData = quizQuestions[currentQuizIndex];
+            document.getElementById('quiz-current-num').innerText = currentQuizIndex + 1;
+            document.getElementById('quiz-total-num').innerText = quizQuestions.length;
+            
+            // update progress bar width
+            const pct = ((currentQuizIndex + 1) / quizQuestions.length) * 100;
+            document.getElementById('quiz-progress-bar').style.width = `${pct}%`;
+
+            document.getElementById('quiz-question').innerText = qData.q;
+
+            let optionsHtml = "";
+            qData.options.forEach((opt, idx) => {
+                optionsHtml += `
+                    <button onclick="selectQuizAnswer(${idx})" id="opt-btn-${idx}" class="quiz-option-btn w-full text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 p-4 rounded-xl text-sm font-medium transition-all flex justify-between items-center">
+                        <span>${opt}</span>
+                    </button>
+                `;
+            });
+            document.getElementById('quiz-options').innerHTML = optionsHtml;
+        }
+
+        function selectQuizAnswer(selectedIndex) {
+            if (answerSelected) return; // Prevent multiple clicks
+            answerSelected = true;
+
+            const qData = quizQuestions[currentQuizIndex];
+            const correctIndex = qData.correct;
+
+            // Highlight answers
+            const selectedBtn = document.getElementById(`opt-btn-${selectedIndex}`);
+            const correctBtn = document.getElementById(`opt-btn-${correctIndex}`);
+
+            if (selectedIndex === correctIndex) {
+                selectedBtn.classList.remove('bg-slate-50', 'border-slate-200');
+                selectedBtn.classList.add('bg-emerald-100', 'border-emerald-400', 'text-emerald-800');
+                quizScore += 20; // 5 questions total 100
+            } else {
+                selectedBtn.classList.remove('bg-slate-50', 'border-slate-200');
+                selectedBtn.classList.add('bg-rose-100', 'border-rose-400', 'text-rose-800');
+                
+                correctBtn.classList.remove('bg-slate-50', 'border-slate-200');
+                correctBtn.classList.add('bg-emerald-100', 'border-emerald-400', 'text-emerald-800');
+            }
+
+            // Show explanation
+            document.getElementById('quiz-explanation-text').innerText = qData.exp;
+            document.getElementById('quiz-explanation-box').classList.remove('hidden');
+            
+            // Scroll to explanation
+            document.getElementById('quiz-explanation-box').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function nextQuizQuestion() {
+            currentQuizIndex++;
+            if (currentQuizIndex < quizQuestions.length) {
+                showQuizQuestion();
+            } else {
+                showQuizResult();
+            }
+        }
+
+        function showQuizResult() {
+            document.getElementById('quiz-area').classList.add('hidden');
+            const resultBox = document.getElementById('quiz-result');
+            resultBox.classList.remove('hidden');
+
+            document.getElementById('quiz-final-score').innerText = `${quizScore}/100`;
+
+            let tier = "Pemula";
+            let desc = "";
+            if (quizScore === 100) {
+                tier = "Penjaga Nusantara";
+                desc = "Luar biasa sempurna! Kamu adalah pelindung sejati bumi pertiwi. Kamu paham betul jenis, sebaran, dan pelestarian SDA Indonesia.";
+            } else if (quizScore >= 60) {
+                tier = "Sahabat Lingkungan";
+                desc = "Bagus sekali! Pemahamanmu mengenai SDA Indonesia sudah matang. Tingkatkan sedikit lagi untuk menguasai sebaran tambang luar pulau.";
+            } else {
+                tier = "Calon Pemimpin Hijau";
+                desc = "Jangan menyerah! Bacalah kembali ringkasan materi di tab pertama, lalu coba lagi kuis ini untuk meningkatkan nilaimu.";
+            }
+
+            document.getElementById('badge-tier').innerText = tier;
+            document.getElementById('quiz-badge-desc').innerText = desc;
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-result').classList.add('hidden');
+            document.getElementById('quiz-intro').classList.remove('hidden');
+        }
+
+        // ---------------- AI TUTOR CHAT CONTROLLER ----------------
+        function handleChatKey(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function appendMessage(sender, text, isAi = false) {
+            const chatMessages = document.getElementById('chat-messages');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = "flex gap-3 items-start animate-fade-in";
+
+            if (isAi) {
+                msgDiv.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">AI</div>
+                    <div class="bg-slate-100 rounded-r-2xl rounded-bl-2xl p-3 text-sm max-w-[85%] text-slate-800 leading-relaxed">
+                        ${text}
+                    </div>
+                `;
+            } else {
+                msgDiv.innerHTML = `
+                    <div class="bg-teal-600 text-white rounded-l-2xl rounded-br-2xl p-3 text-sm max-w-[85%] ml-auto leading-relaxed">
+                        ${text}
+                    </div>
+                    <div class="w-8 h-8 rounded-full bg-slate-300 text-slate-700 flex items-center justify-center flex-shrink-0 text-sm font-bold">Siswa</div>
+                `;
+            }
+
+            chatMessages.appendChild(msgDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function clearChat() {
+            const chatMessages = document.getElementById('chat-messages');
+            chatMessages.innerHTML = `
+                <div class="flex gap-3 items-start">
+                    <div class="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">AI</div>
+                    <div class="bg-slate-100 rounded-r-2xl rounded-bl-2xl p-3 text-sm max-w-[85%] space-y-2">
+                        <p class="font-medium text-slate-800">Halo! Aku adalah Kakak AI, Tutor Geografi dan IPS untuk Kelas 7.</p>
+                        <p class="text-slate-600">Kamu punya pertanyaan tentang Sumber Daya Alam Indonesia? Misalnya: <em>"Kenapa terumbu karang Indonesia sangat beragam?"</em> atau <em>"Bagaimana terbentuknya batubara?"</em>. Silakan tanyakan di sini!</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            // Append User Message
+            appendMessage('User', text, false);
+            input.value = '';
+
+            // Show Thinking Indicator
+            const chatMessages = document.getElementById('chat-messages');
+            const thinkingDiv = document.createElement('div');
+            thinkingDiv.id = 'ai-thinking';
+            thinkingDiv.className = "flex gap-3 items-start";
+            thinkingDiv.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center flex-shrink-0 text-sm font-bold">AI</div>
+                <div class="bg-slate-100 rounded-r-2xl rounded-bl-2xl p-3 text-sm max-w-[85%] text-slate-500 italic">
+                    Sedang berpikir...
+                </div>
+            `;
+            chatMessages.appendChild(thinkingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Generate AI Response using Gemini
+            const aiResponse = await askGemini(text);
+            
+            // Remove Thinking Indicator
+            const thinkingEl = document.getElementById('ai-thinking');
+            if (thinkingEl) thinkingEl.remove();
+
+            // Append AI Message
+            appendMessage('AI', aiResponse, true);
+        }
+
+        function quickAsk(question) {
+            document.getElementById('chat-input').value = question;
+            sendMessage();
+        }
+
+        // Gemini API Call with backoff
+        async function askGemini(query) {
+            const systemPrompt = `Kamu adalah "Kakak AI", seorang guru/tutor Geografi dan IPS yang sangat ramah, suportif, interaktif, dan mudah dimengerti oleh siswa kelas 7 SMP (umur 12-13 tahun). 
+            Fokus utama topik obrolan adalah mengenai "Sumber Daya Alam (SDA) Indonesia" (klasifikasi, persebaran hutan, tambang, laut, pelestarian, amdal). 
+            Aturan respon:
+            1. Jawab dengan bahasa Indonesia yang santun, hangat, komunikatif (sering menggunakan emoji daun, bumi, laut, dsb) dan mudah dicerna anak remaja.
+            2. Selalu gunakan analogi sederhana jika menjelaskan konsep yang rumit.
+            3. Selalu batasi atau tolak secara halus jika siswa menanyakan hal yang sangat melenceng jauh dari ilmu geografi/IPS sekolah (katakan: "Wah, pertanyaan yang menarik! Tapi yuk kita fokus belajar keindahan alam dan kekayaan Indonesia dulu!").
+            4. Jangan berikan jawaban terlalu panjang, batasi maksimal 3-4 paragraf agar tidak membuat bosan anak SMP. Gunakan bullet points atau daftar jika perlu.`;
+
+            let delay = 1000;
+            for (let i = 0; i < 5; i++) {
+                try {
+                    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: query }] }],
+                            systemInstruction: { parts: [{ text: systemPrompt }] }
+                        })
+                    });
+
+                    if (!response.ok) throw new Error('API request failed');
+                    
+                    const result = await response.json();
+                    const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (text) {
+                        return formatMarkdown(text);
+                    }
+                } catch (err) {
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    delay *= 2;
+                }
+            }
+            return "Maaf ya, koneksi Kakak AI sedang terganggu. Coba tanyakan sekali lagi ya!";
+        }
+
+        // Simple Markdown Format Parser for AI response
+        function formatMarkdown(text) {
+            // Replace bold
+            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            // Replace bullets
+            text = text.replace(/^\s*\*\s*(.*?)$/gm, '<li>$1</li>');
+            // Wrap list tags
+            text = text.replace(/(<li>.*?<\/li>)/gs, '<ul class="list-disc list-inside space-y-1 my-2">$1</ul>');
+            // Paragraph breaks
+            text = text.replace(/\n\n/g, '<br><br>');
+            return text;
+        }
+    </script>
+</body>
+</html>
